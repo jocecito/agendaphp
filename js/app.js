@@ -141,7 +141,7 @@ function actualizarRegistro(datos) {
     // leer la respuesta
     xhr.onload = function() {
         if (this.status === 200) {
-            console.log(xhr.responseText);
+            //console.log(xhr.responseText);
             const respuesta = JSON.parse(xhr.responseText);
 
             if (respuesta.respuesta === 'correcto') {
@@ -151,10 +151,10 @@ function actualizarRegistro(datos) {
                 // hubo un error
                 mostrarNotificacion('Hubo un error...', 'error');
             }
-            // Después de 3 segundos redireccionar
+            // Después de 5 segundos redireccionar
             setTimeout(() => {
                 window.location.href = 'index.php';
-            }, 4000);
+            }, 5000);
         }
     }
 
@@ -186,7 +186,7 @@ function eliminarContacto(e) {
 
                     if (resultado.respuesta == 'correcto') {
                         // Eliminar el registro del DOM
-                        console.log(e.target.parentElement.parentElement.parentElement);
+                        //console.log(e.target.parentElement.parentElement.parentElement);
                         e.target.parentElement.parentElement.parentElement.remove();
 
                         // mostrar Notificación

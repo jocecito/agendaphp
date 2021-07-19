@@ -62,7 +62,9 @@ if(isset($_GET['accion']) == 'borrar') {
 
 if(isset($_POST['accion']) == 'editar') {
       //echo json_encode($_POST);
-
+     // echo "<pre>";
+     // echo var_dump($_POST);
+     // echo "</pre>";
      require_once('../funciones/bd.php');
 
      // Validar las entradas
